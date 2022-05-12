@@ -1,4 +1,4 @@
-const { REACT_APP_BASE_URL } = process.env;
+const { DATABASE_URL } = process.env;
 
 export const callApi = async ({ url, method, token, body }) => {
   try {
@@ -10,7 +10,7 @@ export const callApi = async ({ url, method, token, body }) => {
       body: JSON.stringify(body),
     };
 
-    console.log("options", options)
+    console.log("options", options);
 
     if (token) {
       options.headers["Authorization"] = `Bearer ${token}`;
