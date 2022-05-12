@@ -5,7 +5,7 @@ const { Client } = require("pg");
 const DB_NAME = "sneaks";
 
 const DB_URL =
-  process.env.DATABASE_URL || `postgres://localhost:5432/${DB_NAME}`;
+  process.env.DATABASE_URL || $(heroku config:get DATABASE_URL -a my-web-app-sneaks);
 
 let client;
 
@@ -19,7 +19,7 @@ if (process.env.CI) {
     database: "postgres",
   });
 } else {
-  // local / heroku client configg
+  // local / heroku client confi
   client = new Client(DB_URL);
 }
 
