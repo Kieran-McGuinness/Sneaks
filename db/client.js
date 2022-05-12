@@ -19,7 +19,7 @@ if (process.env.CI) {
     database: "postgres",
   });
 } else {
-  // local / heroku client config
+  // local / heroku client configg
   client = new Client(DB_URL);
 }
 
