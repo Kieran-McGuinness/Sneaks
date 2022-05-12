@@ -2,33 +2,19 @@ import React, { useState, useEffect } from "react";
 import { Elements } from "@stripe/react-stripe-js";
 import CheckoutForm from "./Checkout";
 import { callApi } from "../api";
-import AllItems from "./Items";
 import Button from "@mui/material/Button";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import { Select } from "@mui/material";
 import FormControl from "@mui/material/FormControl";
 import DeleteIcon from "@mui/icons-material/Delete";
-import { createTheme } from "@mui/material/styles";
-import { red } from "@mui/material/colors";
 import Snackbar from "@mui/material/Snackbar";
 import MuiAlert from "@mui/material/Alert";
-import { idleTimeoutMillis } from "pg/lib/defaults";
 import { loadStripe } from "@stripe/stripe-js";
-import { Link } from "react-router-dom";
 
 const stripePromise = loadStripe("pk_test_6pRNASCoBOKtIshFeQd4XMUh");
 
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: red[500],
-    },
-    secondary: {
-      main: "#f44339",
-    },
-  },
-});
+
 
 const ShoppingCart = (props) => {
   const { products, setProducts, guestCart, setGuestCart } = props;

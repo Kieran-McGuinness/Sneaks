@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import "../style/common.css";
 import Box from "@mui/material/Box";
-import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
 import Snackbar from "@mui/material/Snackbar";
 import MuiAlert from "@mui/material/Alert";
 import Collapse from "@mui/material/Collapse";
@@ -13,7 +11,6 @@ const CheckoutForm = () => {
   const elements = useElements();
   const [cardMessage, setCardMessage] = useState("");
   const [severity, setSeverity] = useState("");
-  const [username, setUsername] = useState("");
   const [open, setOpen] = useState(false);
 
   const Alert = React.forwardRef(function Alert(props, ref) {

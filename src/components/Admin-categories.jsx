@@ -10,8 +10,6 @@ const AdminCategories = () => {
   const [mainSelect, setMainSelect] = useState(1);
   const [subSelect, setSubSelect] = useState(1);
   useEffect(() => {
-    // console.log(subCats);
-    // console.log(connectedCats);
     const getConnectedCategories = async () => {
       const connectedCats = await callApi({
         url: "/main-sub",
