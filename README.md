@@ -7,7 +7,7 @@ We created "Sneaks" as a website where people can come to purchase rare and hard
 We tried to focus on creating a clean and easily accessible UI. For this we used React JS, and Material UI for our frontend, and Stripe for payment processing. For our server and api we used Node JS and Express. Finally, for our database we used PostgresSQL. To allow unregistered users to shop we utlized browser localStorage so save a guests shopping cart between visits.
 
 
-Our Application was built with
+Our Application features
 - an Express web server,
 - a PostgreSQL database instance,
 - and a React front-end
