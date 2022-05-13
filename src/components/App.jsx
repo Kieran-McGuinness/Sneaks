@@ -27,9 +27,9 @@ const App = () => {
   const [guestCart, setGuestCart] = useState([]);
   const [cartChange, setCartChange] = useState(0);
 
-
   useEffect(() => {
     const fetchItems = async () => {
+      console.log(process.env.REACT_APP_BASE_URL);
       const results = await callApi({
         url: "/items",
       });
@@ -58,7 +58,6 @@ const App = () => {
       const fetchGuestCart = async () => {
         const arr = JSON.parse(localStorage.getItem("guestCart"));
 
-
         const itemIds = arr.map((item) => item.itemId);
         const guestResults = await callApi({
           url: `/shopping-cart/guest/${itemIds}`,
@@ -77,7 +76,6 @@ const App = () => {
         setGuestCart(newResults);
       };
       fetchGuestCart();
-
     }
   }, [cartChange]);
 
