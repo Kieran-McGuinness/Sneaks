@@ -1,4 +1,4 @@
-const { DATABASE_URL } = process.env;
+const { REACT_APP_BASE_URL } = "/api";
 
 export const callApi = async ({ url, method, token, body }) => {
   try {
@@ -16,7 +16,7 @@ export const callApi = async ({ url, method, token, body }) => {
       options.headers["Authorization"] = `Bearer ${token}`;
     }
 
-    const response = await fetch(DATABASE_URL + url, options);
+    const response = await fetch(REACT_APP_BASE_URL + url, options);
 
     const data = await response.json();
 
