@@ -4,8 +4,9 @@ Deployed: https://my-web-app-sneaks.herokuapp.com/
 
 We created "Sneaks" as a website where people can come to purchase rare and hard to find sneakers. As a group we focused on creating a clean, user friendly experience where customers could quickly and seamlessly find the sneakers of their dreams and get them delivereed to their door with as few clicks as possible.
 
-We tried to focus on creating a clean and easily accessible UI. For this we used React JS, and Material UI for our frontend, and Stripe for payment processing. For our server and api we used Node JS and Express. Finally, for our database we used PostgresSQL. To allow unregistered users to shop we utlized browser localStorage so save a guests shopping cart between visits.
+We tried to focus on creating a clean and easily accessible UI. For this we used React JS, and Material UI for our frontend, and Stripe for payment processing. For our server and api we used Node JS and Express. Finally, for our database we used PostgresSQL. To allow unregistered users to shop we stored their information in browser localStorage to save their cart between visits.
 
+A visitor to our site is able to view all of our avasilablke products, view information about the individual items, search through our catalogue, and add a desired quantity of product to their cart. Once in their cart a user may edit their cart by removing items or updating quantities before proceeding to checkout. If a user chooses to register before adding items to their cart their cart will be av
 
 Our Application features
 - an Express web server,
