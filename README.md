@@ -14,7 +14,7 @@
 ├── api
 │   ├── admin.js
 |   ├── apiRouter.test.js
-|   ├── index.js
+│   ├── index.js
 |   ├── items.js
 |   ├── main_sub.js
 |   ├── maincategories.js
