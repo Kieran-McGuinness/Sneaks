@@ -1,4 +1,4 @@
-const { REACT_APP_BASE_URL } = "/api";
+const { REACT_APP_BASE_URL } = process.env;
 
 export const callApi = async ({ url, method, token, body }) => {
   try {
