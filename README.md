@@ -1,4 +1,4 @@
-# Let's Build a Full Stack Application
+# Sneaks a Full Stack E-Commerce Web Application
 
 - an Express web server,
 - a PostgreSQL database instance,
