@@ -27,7 +27,6 @@ const Admin = () => {
       setPasswordConfirm("");
       if (!results.token) {
         console.log(results);
-        // alert('The username or password entered is invalid. Please try again.')
       } else if (results.token) {
         localStorage.removeItem("adminToken");
         localStorage.setItem("adminToken", results.token);
