@@ -1,5 +1,5 @@
 # Sneaks a Full Stack E-Commerce Web Application
-
+Deployed: https://my-web-app-sneaks.herokuapp.com/
 - an Express web server,
 - a PostgreSQL database instance,
 - and a React front-end
