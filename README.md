@@ -11,7 +11,7 @@ A visitor to our site is able to view all of our avasilablke products, view info
 Our Application features
 - an Express web server,
 - a PostgreSQL database instance,
-- and a React front-end
+- and a React front-end.
 
 
 ## Project Structure
