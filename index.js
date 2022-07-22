@@ -18,16 +18,16 @@ server.use(express.json());
 
 // here's our static files
 const path = require("path");
-server.use(express.static(path.join(__dirname, "build", "index.html")));
+server.use(express.static(path.join(__dirname, "build")));
 
 // here's our API
 const apiRouter = require("./api");
 server.use("/api", apiRouter);
 // server.get("/api", (req, res) => res.send("test"))
 // by default serve up the react app if we don't recognize the route
-// server.use((req, res, next) => {
-//   res.sendFile(path.join(__dirname, 'build', 'index.html'));
-// });
+server.use((req, res, next) => {
+  res.sendFile(path.join(__dirname, "build", "index.html"));
+});
 
 server.use((error, req, res, next) => {
   res.status(500);
