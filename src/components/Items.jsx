@@ -140,23 +140,24 @@ const AllItems = (props) => {
       <div className="page-title">
         <h1>Sneakers</h1>
         <div className="item-category">
-        <FormControl sx={{ m: 1, minWidth: 130 }} size="small">
-          <InputLabel id="item-category">Categories</InputLabel>
-          <Select
-            labelId="category-filter"
-            id="item-category-select"
-            label="Categories"
-            value={currentCategory}
-            onChange={(event) => catSearch(parseInt(event.target.value))}
-          >
-            <MenuItem value={0}>None</MenuItem>
-            {subCategories.map((category, index) => (
-              <MenuItem key={index} value={category.id}>
-                {category.name}
-              </MenuItem>
-            ))}
-          </Select>
-        </FormControl>
+          <FormControl sx={{ m: 1, minWidth: 130 }} size="small">
+            <InputLabel id="item-category">Categories</InputLabel>
+            <Select
+              labelId="category-filter"
+              id="item-category-select"
+              label="Categories"
+              value={currentCategory}
+              disableScrollLock={true}
+              onChange={(event) => catSearch(parseInt(event.target.value))}
+            >
+              <MenuItem value={0}>None</MenuItem>
+              {subCategories.map((category, index) => (
+                <MenuItem key={index} value={category.id}>
+                  {category.name}
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
         </div>
         {/* <TextField id="outlined-basic" label="Search Items..." variant="outlined" size="small" type = "search" className="search-bar" onChange={(event) => setSearchItem(event.target.value)}/> */}
         {/* <input type = "search" placeholder = "Search Items..."
@@ -174,7 +175,12 @@ const AllItems = (props) => {
                 >
                   <h1>{item.name}</h1>
 
-                  <img width="120px" height="120px" src={item.image} alt="item" />
+                  <img
+                    width="120px"
+                    height="120px"
+                    src={item.image}
+                    alt="item"
+                  />
                   <h3 className="item-info">{item.description}</h3>
                   <h3 className="item-info">Price: ${item.price}</h3>
 
