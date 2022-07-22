@@ -143,11 +143,11 @@ const AllItems = (props) => {
           <FormControl sx={{ m: 1, minWidth: 130 }} size="small">
             <InputLabel id="item-category">Categories</InputLabel>
             <Select
+              MenuProps={{ disableScrollLock: true }}
               labelId="category-filter"
               id="item-category-select"
               label="Categories"
               value={currentCategory}
-              disableScrollLock={true}
               onChange={(event) => catSearch(parseInt(event.target.value))}
             >
               <MenuItem value={0}>None</MenuItem>
