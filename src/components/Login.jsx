@@ -113,7 +113,7 @@ const Login = (props) => {
             value={password}
             onChange={(event) => setPassword(event.target.value)}
           />
-          <Link to="/register">Need an account? Click here to register</Link>
+          <Link to="/register">New User? Click here to register</Link>
           <br></br>
           <Button style={{ fontSize: "14px" }} variant="outlined" type="submit">
             Sign-In
